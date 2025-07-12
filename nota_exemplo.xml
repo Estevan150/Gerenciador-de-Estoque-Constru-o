@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export>
+    <nfse>
+        <numero>1594</numero>
+        <serie>0</serie>
+        <data_emissao>20012025</data_emissao>
+        <hora_emissao>153730</hora_emissao>
+        <valor_total>37.465,00</valor_total>
+        <iss_retido>true</iss_retido>
+        <identificador>NFS.JBO28TN3QQ.J41WGPV8Z5.00018A</identificador>
+        <irrf>0,00</irrf>
+        <inss>0,00</inss>
+        <orgao_gerador>
+            <documento>10.110.989/0001-40</documento>
+            <nome>Prefeitura Municipal de Barreiros</nome>
+            <municipio>Barreiros</municipio>
+            <codigo_municipio>2601409</codigo_municipio>
+            <estado>Pernambuco</estado>
+            <uf>PE</uf>
+            <codigo_estado>26</codigo_estado>
+        </orgao_gerador>
+        <prestador>
+            <documento>32.917.836/0012-02</documento>
+            <razao_social>CONCREARTE SERVIÇOS DE CONCRETAGEM LTDA</razao_social>
+            <email>contabilidade@concrearteconcreto.com</email>
+            <inscricao_municipal>02010978</inscricao_municipal>
+            <inscricao_estadual></inscricao_estadual>
+            <endereco>
+                <cep>55.560-000</cep>
+                <logradouro>ROD PE 60</logradouro>
+                <numero>SN</numero>
+                <bairro>ENGENHO HERVAL</bairro>
+                <municipio>Barreiros</municipio>
+                <codigo_municipio>2601409</codigo_municipio>
+                <estado>Pernambuco</estado>
+                <uf>PE</uf>
+                <codigo_estado>26</codigo_estado>
+                <complemento></complemento>
+            </endereco>
+        </prestador>
+        <tomador>
+            <documento>11.431.295/0001-77</documento>
+            <razao_social>CRPJ EMPREENDIMETOS IMOBILIARIOS LTDA</razao_social>
+            <email>engdiegochagas1@gmail.com</email>
+            <inscricao_municipal></inscricao_municipal>
+            <inscricao_estadual></inscricao_estadual>
+            <endereco>
+                <cep>55578000</cep>
+                <logradouro>RUA RAUL DE PONTEIA</logradouro>
+                <numero>0</numero>
+                <bairro>CENTRO</bairro>
+                <municipio>Tamandaré</municipio>
+                <codigo_municipio>2614857</codigo_municipio>
+                <estado>Pernambuco</estado>
+                <uf>PE</uf>
+                <codigo_estado>26</codigo_estado>
+                <complemento></complemento>
+            </endereco>
+        </tomador>
+        <local>
+            <municipio>Tamandaré</municipio>
+            <codigo_municipio>2614857</codigo_municipio>
+            <estado>Pernambuco</estado>
+            <uf>PE</uf>
+            <codigo_estado>26</codigo_estado>
+        </local>
+        <item>
+            <cnae>
+                <codigo>4399-1/99</codigo>
+                <descricao>Serviços especializados para construção não especificados anteriormente</descricao>
+                <codigo_servico>7.02</codigo_servico>
+                <descricao_servico>Execução, por administração, empreitada ou subempreitada, de obras de construção civil, hidráulica ou elétrica e de outras obras semelhantes, inclusive sondagem, perfuração de poços, escavação, drenagem e irrigação, terraplanagem, pavimentação, concretagem e a instalação e montagem de produtos, peças e equipamentos (exceto o fornecimento de mercadorias produzidas pelo prestador de serviços fora do local da prestação dos serviços, que fica sujeito ao ICMS)</descricao_servico>
+            </cnae>
+            <quantidade>1,00</quantidade>
+            <unidade>Unidade</unidade>
+            <valor_unitario>37.465,00</valor_unitario>
+            <valor>37.465,00</valor>
+            <descricao>PRESTAÇÃO DE SERVIÇO DE CONCRETAGEM.&#13;
+Número de inscrição da obra&#13;
+90.021.97234/76&#13;
+&#13;
+</descricao>
+            <iss_pct>5,00</iss_pct>
+            <iss>1.873,25</iss>
+            <deducao_material_pct>40,00</deducao_material_pct>
+            <deducao_material>14.986,00</deducao_material>
+        </item>
+    </nfse>
+</export>

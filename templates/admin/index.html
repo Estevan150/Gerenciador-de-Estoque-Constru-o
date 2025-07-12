@@ -1,0 +1,14 @@
+{% extends "admin/index.html" %}
+
+{% block content %}
+
+<div style="margin-bottom: 20px;">
+    <a href="{% url 'dashboard' %}" style="font-weight: bold; font-size: 1.2em; text-decoration: none;">
+        &#x1F4CA; Ver Dashboard do Estoque
+    </a>
+    <p>Clique no link acima para uma visão geral do status do estoque em tempo real.</p>
+</div>
+
+{{ block.super }}
+
+{% endblock %}

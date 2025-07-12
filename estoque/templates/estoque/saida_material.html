@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Saída de Material</title>
+    <style>
+        body { font-family: sans-serif; margin: 2em; background-color: #f4f4f4; display: flex; justify-content: center; }
+        .container { display: flex; gap: 2em; max-width: 1000px; width: 100%; }
+        .form-section, .stock-section { background: white; padding: 2em; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        .form-section { flex: 1; }
+        .stock-section { flex: 2; }
+        .messages { list-style: none; padding: 0; }
+        .messages li { padding: 1em; margin-bottom: 1em; border-radius: 4px; }
+        .messages li.success { background-color: #d4edda; color: #155724; border: 1px solid #c3e6cb; }
+        .messages li.error { background-color: #f8d7da; color: #721c24; border: 1px solid #f5c6cb; }
+        table { width: 100%; border-collapse: collapse; }
+        th, td { padding: 8px; border: 1px solid #ddd; text-align: left; }
+        th { background-color: #f2f2f2; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="form-section">
+            <h1>Saída de Material</h1>
+
+            {% if messages %}
+            <ul class="messages">
+                {% for message in messages %}
+                <li class="{{ message.tags }}">{{ message }}</li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+
+            <form method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit">Registrar Saída</button>
+            </form>
+        </div>
+
+        <div class="stock-section">
+            <h2>Estoque Atual</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Material</th>
+                        <th>Estoque Disponível</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for material in materiais %}
+                    <tr>
+                        <td>{{ material.descricao }}</td>
+                        <td>{{ material.estoque_atual }} {{ material.unidade_medida }}</td>
+                    </tr>
+                    {% empty %}
+                    <tr>
+                        <td colspan="2">Nenhum material em estoque.</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

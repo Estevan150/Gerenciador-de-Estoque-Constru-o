@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block title %}Criar Requisição de Material{% endblock %}
+
+{% block content %}
+  <h2 class="mb-3">Criar Nova Requisição de Material</h2>
+  <p>Use o formulário abaixo para solicitar os materiais necessários para a obra.</p>
+
+  {% if messages %}
+    {% for message in messages %}
+      <div class="alert alert-success" role="alert">
+        {{ message }}
+      </div>
+    {% endfor %}
+  {% endif %}
+
+  <form method="post" class="mt-4">
+    {% csrf_token %}
+
+    {{ formset.management_form }}
+
+    <hr>
+    <h4>Itens da Requisição</h4>
+    <p class="text-muted small">Preencha os materiais e quantidades que deseja solicitar.</p>
+
+    {% for item_form in formset %}
+      <div class="row align-items-center mb-3 p-2 border rounded">
+        <div class="col-md-6">
+          <label class="form-label">Material:</label>
+          {{ item_form.material }}
+        </div>
+        <div class="col-md-4">
+          <label class="form-label">Quantidade Solicitada:</label>
+          {{ item_form.quantidade_solicitada }}
+        </div>
+      </div>
+      {{ item_form.errors }}
+    {% endfor %}
+
+    <hr>
+    <button type="submit" class="btn btn-primary mt-3">Enviar Requisição</button>
+  </form>
+{% endblock %}

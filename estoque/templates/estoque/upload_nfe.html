@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block title %}Upload de NF-e{% endblock %}
+
+{% block content %}
+    <h1>Entrada de Materiais por NF-e</h1>
+
+    {% if user.is_admin_role %}
+    <div class="my-3">
+        <a href="{% url 'admin:index' %}" class="btn btn-secondary btn-sm">&larr; Voltar ao Painel de Admin</a>
+    </div>
+    {% endif %}
+
+    {% if messages %}
+    <ul class="list-unstyled">
+        {% for message in messages %}
+        <li class="alert 
+            {% if message.tags == 'success' %}alert-success{% else %}alert-danger{% endif %}">
+            {{ message }}
+        </li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+
+    <p>Por favor, selecione o arquivo XML da nota fiscal para dar entrada no estoque.</p>
+
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="mb-3">
+            {{ form.as_p }}
+        </div>
+        <button type="submit" class="btn btn-primary">Enviar Arquivo</button>
+    </form>
+{% endblock %}

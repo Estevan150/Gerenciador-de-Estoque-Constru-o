@@ -1,0 +1,6 @@
+/* Arquivo: static/css/custom.css */
+
+/* Esta regra vai sobrescrever a cor de fundo padrão do Bootstrap para a nossa navbar */
+.bg-dark {
+    background-color: #0d47a1 !important; /* Um tom de azul escuro */
+}
