@@ -2,13 +2,13 @@
 
 {% block content %}
 
-<div style="margin-bottom: 20px;">
-    <a href="{% url 'dashboard' %}" style="font-weight: bold; font-size: 1.2em; text-decoration: none;">
-        &#x1F4CA; Ver Dashboard do Estoque
-    </a>
-    <p>Clique no link acima para uma visão geral do status do estoque em tempo real.</p>
+<div class="card mb-4 shadow-sm">
+    <div class="card-body text-center p-4">
+        <h2 class="card-title">Dashboard de Estoque</h2>
+        <p class="card-text text-muted">Acesse a visão geral para monitorar o status dos materiais, entradas e saídas em tempo real.</p>
+        <a href="{% url 'dashboard' %}" class="btn btn-primary btn-lg mt-2">Acessar o Dashboard</a>
+    </div>
 </div>
-
 {{ block.super }}
 
 {% endblock %}

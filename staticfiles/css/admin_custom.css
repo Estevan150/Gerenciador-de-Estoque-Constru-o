@@ -1,0 +1,9 @@
+/* Arquivo: static/css/admin_custom.css (SÓ para o admin) */
+
+/* O nosso "quadrado branco" para o logo na barra lateral */
+.brand-link .brand-image {
+    background-color: white;
+    padding: 4px;
+    border-radius: 8px; /* Bordas suaves */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}

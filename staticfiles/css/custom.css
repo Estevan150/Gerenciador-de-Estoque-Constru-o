@@ -1,0 +1,31 @@
+/* Arquivo: static/css/custom.css (para as páginas do app) */
+
+body {
+    background-color: #8B2E2E !important; /* Vermelho CRPJ para o fundo */
+}
+
+main.container h1,
+main.container h2,
+main.container h4,
+main.container p {
+    color: white; /* Deixa os títulos e textos principais brancos */
+}
+
+.card {
+    background-color: #ffffff; 
+    color: #212529; /* Texto escuro dentro dos cards */
+}
+.card-header, .card h1, .card h2, .card h4, .card h5 {
+    color: #212529;
+}
+
+.navbar.bg-dark {
+    background-color: #ffffff !important;
+    border-bottom: 1px solid #dee2e6;
+}
+.navbar-brand, .navbar-nav .nav-link, .navbar .navbar-text, .navbar .navbar-text a {
+    color: #212529 !important;
+}
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(0, 0, 0, 0.7)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+}

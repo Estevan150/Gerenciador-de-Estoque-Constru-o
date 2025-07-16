@@ -1,0 +1,70 @@
+/* static/css/admin_custom.css - Theming Final e Completo da Marca CRPJ */
+
+/* --- FUNDO GERAL --- */
+.content-wrapper, .main-footer {
+    background-color: #8B2E2E !important; /* Vermelho CRPJ */
+}
+.content-header h1 {
+    color: white !important;
+}
+
+/* --- BARRA LATERAL (MENU) E LOGO --- */
+/* MUDANÇA: Fundo da barra lateral agora é o vermelho da marca */
+.main-sidebar, .brand-link {
+    background-color: #8B2E2E !important;
+}
+
+/* MUDANÇA: Garante que o texto e os ícones no menu sejam brancos */
+.sidebar .nav-link p, .sidebar .nav-link i {
+    color: #f8f9fa !important;
+}
+
+/* Quadrado branco do logo */
+.brand-link .brand-image {
+    background-color: white;
+    padding: 4px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+/* Item de menu ATIVO -> Dourado */
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    background-color: #E8B655;
+    color: #212529 !important;
+}
+/* Garante que o ícone do item ativo também fique escuro */
+.nav-pills .nav-link.active i {
+    color: #212529 !important;
+}
+
+
+/* --- CARDS E PAINÉIS --- */
+.card, .info-box, .actions {
+    background-color: #343a40 !important; /* Um cinza escuro para os painéis */
+    border-color: #495057 !important;
+    color: #f8f9fa;
+}
+.card-header {
+    background-color: #454d55 !important;
+    color: #E8B655 !important;
+    border-bottom: 1px solid #6c757d !important;
+}
+.card-body a {
+    color: #E8B655 !important;
+    font-weight: 500;
+}
+.card-body a:hover {
+    color: #fff !important;
+}
+
+/* --- BOTÕES DE AÇÃO --- */
+a.btn.btn-success {
+    background-color: #E8B655 !important;
+    border-color: #d4a24e !important;
+    color: #212529 !important;
+}
+a.btn.btn-info {
+    background-color: #a14e4e !important;
+    border-color: #8B2E2E !important;
+    color: white !important;
+}

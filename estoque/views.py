@@ -62,22 +62,29 @@ def saida_material_view(request):
         'materiais': materiais
     })
 
-@login_required
+# estoque/views.py
+
+@login_required # Este decorator já garante que só usuários logados acessam
 def dashboard_view(request):
-    # ... (código da dashboard_view continua aqui, sem alterações) ...
-    if request.user.role not in [UserRole.ADMIN, UserRole.ENGENHEIRO]:
-        raise PermissionDenied
+    # A verificação de perfil foi removida daqui, permitindo que todos os
+    # usuários logados (Mestre de Obras, Almoxarife, etc.) vejam o dashboard.
+    # A lógica de mostrar/esconder links no menu já controla o que cada um pode fazer.
+
+    # O resto da lógica para buscar os dados continua exatamente igual
     materiais_agrupados = {}
     unidades = UnidadeMedida.choices
     for sigla, nome_extenso in unidades:
         materiais_da_unidade = Material.objects.filter(unidade_medida=sigla).order_by('descricao')
         if materiais_da_unidade.exists():
             materiais_agrupados[nome_extenso] = materiais_da_unidade
+
     total_tipos_materiais = Material.objects.count()
+
     context = {
         'materiais_agrupados': materiais_agrupados,
         'total_tipos_materiais': total_tipos_materiais
     }
+
     return render(request, 'estoque/dashboard.html', context)
 
 

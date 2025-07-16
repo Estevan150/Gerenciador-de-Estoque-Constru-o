@@ -18,3 +18,11 @@ def aprovar_usuario(request, token):
 
     # Retorna uma mensagem simples de sucesso na página
     return HttpResponse("<h1>Usuário aprovado com sucesso!</h1><p>Esta conta agora pode acessar o sistema.</p>")
+
+
+from django.shortcuts import redirect
+# ... outros imports e views ...
+
+# Esta view apenas redireciona para nossa página de login nomeada 'login'
+def custom_admin_login(request):
+    return redirect('login')
