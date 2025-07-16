@@ -1,70 +1,70 @@
-/* static/css/admin_custom.css - Theming Final e Completo da Marca CRPJ */
+/* static/css/admin_custom.css - Customização FINAL e CORRETA do Admin */
 
-/* --- FUNDO GERAL --- */
-.content-wrapper, .main-footer {
-    background-color: #8B2E2E !important; /* Vermelho CRPJ */
-}
-.content-header h1 {
-    color: white !important;
-}
-
-/* --- BARRA LATERAL (MENU) E LOGO --- */
-/* MUDANÇA: Fundo da barra lateral agora é o vermelho da marca */
-.main-sidebar, .brand-link {
-    background-color: #8B2E2E !important;
+/* --- CORES DA MARCA --- */
+:root {
+    --cor-vermelho-crpj: #8B2E2E;
+    --cor-dourado-crpj: #E8B655;
+    --cor-texto-claro: #f8f9fa;
+    --cor-texto-escuro: #212529;
+    --cor-painel-interno: #343a40; /* Cinza escuro para os cards */
 }
 
-/* MUDANÇA: Garante que o texto e os ícones no menu sejam brancos */
+/* --- ESTRUTURA PRINCIPAL DO ADMIN --- */
+
+/* Aplica o fundo vermelho na BARRA LATERAL e na ÁREA DE CONTEÚDO */
+.main-sidebar, .content-wrapper {
+    background-color: var(--cor-vermelho-crpj) !important;
+}
+
+/* Garante que o texto e os ícones no menu lateral fiquem brancos */
 .sidebar .nav-link p, .sidebar .nav-link i {
-    color: #f8f9fa !important;
+    color: var(--cor-texto-claro) !important;
 }
 
-/* Quadrado branco do logo */
+/* --- LOGO --- */
+/* Mantém o logo no quadrado branco, como você pediu */
 .brand-link .brand-image {
     background-color: white;
     padding: 4px;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.5);
 }
 
-/* Item de menu ATIVO -> Dourado */
-.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
-    background-color: #E8B655;
-    color: #212529 !important;
-}
-/* Garante que o ícone do item ativo também fique escuro */
-.nav-pills .nav-link.active i {
-    color: #212529 !important;
+/* --- PAINÉIS E CARDS --- */
+/* Deixa os painéis (como "Estoque") com um fundo escuro para contrastar */
+.content .card {
+    background-color: var(--cor-painel-interno) !important;
+    color: var(--cor-texto-claro);
 }
 
-
-/* --- CARDS E PAINÉIS --- */
-.card, .info-box, .actions {
-    background-color: #343a40 !important; /* Um cinza escuro para os painéis */
-    border-color: #495057 !important;
-    color: #f8f9fa;
-}
-.card-header {
+/* Cabeçalho dos painéis com letras douradas */
+.content .card-header {
     background-color: #454d55 !important;
-    color: #E8B655 !important;
-    border-bottom: 1px solid #6c757d !important;
-}
-.card-body a {
-    color: #E8B655 !important;
-    font-weight: 500;
-}
-.card-body a:hover {
-    color: #fff !important;
+    color: var(--cor-dourado-crpj) !important;
 }
 
-/* --- BOTÕES DE AÇÃO --- */
-a.btn.btn-success {
-    background-color: #E8B655 !important;
-    border-color: #d4a24e !important;
-    color: #212529 !important;
+/* Títulos principais (como "Dashboard") em branco */
+.content-header h1 {
+    color: var(--cor-texto-claro) !important;
 }
+
+/* --- LINKS E BOTÕES (GARANTINDO LEGIBILIDADE) --- */
+
+/* Links dentro dos painéis (como "Fornecedores") em dourado */
+.card-body a {
+    color: var(--cor-dourado-crpj) !important;
+    font-size: 1rem !important; /* Tamanho maior */
+}
+
+/* Botão "Adicionar" -> Dourado com texto escuro */
+a.btn.btn-success {
+    background-color: var(--cor-dourado-crpj) !important;
+    border-color: var(--cor-dourado-crpj) !important;
+    color: var(--cor-texto-escuro) !important;
+}
+
+/* Botão "Modificar" -> Vermelho mais sutil com texto branco */
 a.btn.btn-info {
     background-color: #a14e4e !important;
-    border-color: #8B2E2E !important;
-    color: white !important;
+    border-color: var(--cor-vermelho-crpj) !important;
+    color: var(--cor-texto-claro) !important;
 }

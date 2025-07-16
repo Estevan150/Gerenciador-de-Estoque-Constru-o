@@ -1,20 +1,21 @@
-# Arquivos de Cache do Python
+# Arquivos de Cache
 __pycache__/
 *.pyc
 
-# Banco de dados local
-db.sqlite3
+# Banco de Dados
+db.sqlite3*
 
 # Ambiente Virtual
 /venv/
 
-# Arquivos de sistema operacional
-.DS_Store
-Thumbs.db
+# Pasta de estáticos gerada
+/staticfiles/
 
-# Arquivos de IDEs
+# Arquivo de segredos
+.env
+
+# Arquivos de IDE e SO
 .vscode/
 .idea/
-
-# Arquivo de variáveis de ambiente
-.env
+.DS_Store
+Thumbs.db
